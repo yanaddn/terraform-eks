@@ -1,4 +1,6 @@
-# terraform-eks
+# Terraform & EKS project
+
+Terraform setup for an AWS EKS cluster with a custom VPC, managed node group, and an nginx LoadBalancer demo.
 
 - [Overview](#overview)
 - [CLI Commands](#cli-commands)
@@ -87,7 +89,7 @@ ip-10-0-3-148.eu-west-3.compute.internal   Ready    <none>   5m32s   v1.35.9-eks
 
 ### Load balancer
 ```
-yana@Mac terraform-eks-demo % kubectl get svc
+% kubectl get svc
 NAME         TYPE           CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)        AGE
 kubernetes   ClusterIP      172.20.0.1      <none>                                                                    443/TCP        100m
 nginx        LoadBalancer   172.20.246.47   ab715384d7a77425daa7d55f4f95c072-1787603864.eu-west-3.elb.amazonaws.com   80:32423/TCP   7m57s
@@ -96,7 +98,7 @@ nginx        LoadBalancer   172.20.246.47   ab715384d7a77425daa7d55f4f95c072-178
 
 ### Nginx 
 ```
-yana@Mac ~ % kubectl get pod
+% kubectl get pod
 NAME                     READY   STATUS    RESTARTS   AGE
 nginx-75fdcbbc74-s7m89   1/1     Running   0          17m
 ```
